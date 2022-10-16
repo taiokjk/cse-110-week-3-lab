@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="./index.css">
 <html lang="en">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
     <title>Liam zoom zoom</title>
     <link rel="icon" type="image/x-icon" href="./static/logo.ico">
@@ -8,28 +9,25 @@
 
 <body>
     <header>
-        <img src="./static/logo.png" width="100" alt="Logo goes here">
+        <img src="./static/logo.png" width="100" alt="Logo goes here" style="position: sticky">
     </header>
     <hr>
     <main>
-        <table>
+        <table class="outer-table">
             <tr>
                 <td>
-                    <h3>
+                    <h3 style="margin-left: 2%; text-align: center;">
                         <b>
-                            Computer<br>Engineers
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Computer Engineers
                         </b>
                     </h3>
                 </td>
                 <td>
-                    <h1>Meeting Minutes</h1>
+                    <h1 id="title" style="text-align: center;">Meeting Minutes</h1>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="left">
                     <table>
                         <tr>
                             <td>
@@ -50,15 +48,11 @@
                                 <b>Attendees</b>
                             </td>
                             <td>
-                                Kenneth C. McDonald
-                                <br>
-                                Thomas S. Price
-                                <br>
-                                Richard M. Nee
-                                <br>
-                                Sean J. Avery
-                                <br>
-                                Liam Nguyen
+                                <div class="first second" style="display: block;">Kenneth C. McDonald</div>
+                                <div style="display: block;">Thomas S. Price</div>
+                                <div style="display: block;">Richard M. Nee</div>
+                                <div style="display: block;">Sean J. Avery</div>
+                                <span style="display: block;">Liam Nguyen</span>
                             </td>
                         </tr>
                         <tr>
@@ -118,7 +112,7 @@
                         </tr>
                     </table>
                 </td>
-                <td>
+                <td class="right">
                     <table>
                         <tr>
                             <td>
@@ -187,9 +181,9 @@
                             <td>
 
                             </td>
-                            <td>
+                            <td style="position: relative;">
                                 <details>
-                                    <summary>Sumary</summary>
+                                    <summary style="position: absolute; top: 50px; left: 10%">Sumary</summary>
                                     <p>
                                         Not everyone's done their job.
                                         <br>
@@ -201,34 +195,6 @@
                     </table>
                 </td>
             </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </table>
     </main>
     <hr>
@@ -243,48 +209,40 @@
     <hr>
     <form>
         <fieldset>
-            <table>
-                <tr>
-                    <td>
-                        <label>Put something here</label>
-                    </td>
-                    <td>
-                        <input list="select">
+            <div class="grid-container">
+                <div class="grid-item-left">
+                    <label>Put something here</label>
+                </div>
+                <div class="grid-item-right">
+                    <input list="select">
                         <datalist id="select">
                             <option value="Select?">
                             <option value="Select!">
                             <option value="Don't select :(">
                         </datalist>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Type something</label>
-                    </td>
-                    <td>
-                        <textarea></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Select something</label>
-                    </td>
-                    <td>
-                        <select>
-                            <option>Hello</option>
-                            <option>World</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-
-                    </td>
-                    <td>
-                        <button>click click</button>
-                    </td>
-                </tr>
-            </table>
+                </div>
+                <div>
+                    <label>Type something</label>
+                </div>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <label>Select something</label>
+                </div>
+                <div>
+                    <select>
+                        <option>Hello</option>
+                        <option>World</option>
+                    </select>
+                </div>
+                <div class="grid-button">
+                    <button>click click</button>
+                </div>
+                <div style="display: none;">
+                    This part won't show
+                </div>
+            </div>
         </fieldset>
 
     </form>
